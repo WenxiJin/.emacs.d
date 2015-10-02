@@ -1,9 +1,11 @@
 ;; helm
 (require-package 'helm) ;; install helm
 (require-package 'helm-core)
-(require-package 'helm-gtags)
 (require-package 'helm-projectile)
+(require-package 'helm-gtags)
 (require-package 'helm-swoop)
+(require-package 'helm-company)
+(require-package 'helm-cscope)
 
 (require 'helm)
 (require 'helm-config)
@@ -77,33 +79,54 @@
 (setq helm-swoop-move-to-line-cycle t)
 (setq helm-swoop-use-line-number-face t)
 
-;; ac-helm
-(require 'ac-helm) ;; Not necessary if using ELPA package
-(global-set-key (kbd "C-.") 'ac-complete-with-helm)
-(define-key ac-complete-mode-map (kbd "C-.") 'ac-complete-with-helm)
 
-; helm-gtags
-;; Enable helm-gtags-mode
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
+;; ;; ac-helm
+;; (require 'ac-helm) ;; Not necessary if using ELPA package
+;; (global-set-key (kbd "C-.") 'ac-complete-with-helm)
+;; (define-key ac-complete-mode-map (kbd "C-.") 'ac-complete-with-helm)
 
-;; Set key bindings
-(eval-after-load "helm-gtags"
-  '(progn
-     (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-     (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-     (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-     (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-     (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-     (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-     (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
-
+;; ;; helm-gtags, currently using cscope
+;; ;; Enable helm-gtags-mode
+;; (add-hook 'c-mode-hook 'helm-gtags-mode)
+;; (add-hook 'c++-mode-hook 'helm-gtags-mode)
+;; (add-hook 'asm-mode-hook 'helm-gtags-mode)
+;; ;; Set key bindings
+;; (eval-after-load "helm-gtags"
+;;   '(progn
+;;      (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
+;;      (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+;;      (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+;;      (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
+;;      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+;;      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+;;      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
 
 ;; helm-ls-git
 ;(require 'helm-ls-git)
 ;(global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
 ;(global-set-key (kbd "C-x C-d") 'helm-browse-project)
+
+
+;; helm-company
+(autoload 'helm-company "helm-company") ;; Not necessary if using ELPA package
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-.") 'helm-company)
+     (define-key company-active-map (kbd "C-.") 'helm-company)))
+
+;; helm-cscope
+;; Enable helm-cscope-mode
+(add-hook 'c-mode-hook 'helm-cscope-mode)
+(add-hook 'c++-mode-hook 'helm-cscope-mode)
+;; Set key bindings
+(eval-after-load "helm-cscope"
+  '(progn
+     (define-key helm-cscope-mode-map (kbd "C-c s s") 'helm-cscope-find-symbol)
+     (define-key helm-cscope-mode-map (kbd "C-c s g") 'helm-cscope-find-global-definition)
+     (define-key helm-cscope-mode-map (kbd "C-c s c") 'helm-cscope-find-called-function)
+     (define-key helm-cscope-mode-map (kbd "C-c s p") 'helm-cscope-find-calling-this-funtcion)
+     (define-key helm-cscope-mode-map (kbd "M-s") 'helm-cscope-select)))
+
 
 
 (provide 'init-helm)
