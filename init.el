@@ -16,7 +16,18 @@
 (require 'init-smartparens)
 (require 'init-git)
 (require 'init-switch-window)
-(require 'init-nyan-mode)
+(when (display-graphic-p)
+(require 'init-nyan-mode))
+
+;; trailing-whitespace
+(require 'init-whitespace)
+(require 'init-highlight-chars)
+(require 'init-highlight-symbol)
+
+;; 3 minor modes for the perfect indent
+(require 'init-clean-aindent-mode)
+(require 'init-dtrt-indent)
+(require 'init-ws-butler)
 
 ;; all helm related stuffs
 (require 'init-xcscope)
@@ -24,14 +35,4 @@
 (require 'init-helm)
 (require 'init-function-args)
 
-;; trailing-whitespace
-(require 'init-whitespace)
-(require 'init-highlight-chars)
-(require 'init-highlight-symbol)
-
-
-;; 3 minor modes for the perfect indent
-(require 'init-clean-aindent-mode)
-(require 'init-dtrt-indent)
-(require 'init-ws-butler)
 
