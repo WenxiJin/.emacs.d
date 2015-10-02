@@ -5,8 +5,23 @@
 (require-package 'company-c-headers)
 
 (require 'company)
+(require 'company-c-headers)
 (add-hook 'after-init-hook 'global-company-mode)
-(define-key company-mode-map  [(tab)] 'company-complete)
+(setq company-idle-delay 0)
+(defun indent-or-complete ()
+  "Complete if point is at end of a word, otherwise indent line."
+  (interactive)
+  (if (looking-at "\\>")
+      (dabbrev-expand nil)
+    (indent-for-tab-command)
+    ))
+(add-hook 'c-mode-common-hook
+	  (function (lambda ()
+		      (local-set-key (kbd "<tab>") 'indent-or-complete)
+		      )))
+;; (define-key company-mode-map  (kbd "<tab>") 'company-complete)
+
+
 
 ;; company-clang
 ;; .dir-locals.el is used to retrive completion candidates for user projects

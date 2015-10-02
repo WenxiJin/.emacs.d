@@ -1,6 +1,6 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
-;; (defconst *is-a-mac* (eq system-type 'darwin))
+(defconst *is-a-mac* (eq system-type 'darwin))
 
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
@@ -17,7 +17,7 @@
 (require 'init-git)
 (require 'init-switch-window)
 (when (display-graphic-p)
-(require 'init-nyan-mode))
+  (require 'init-nyan-mode))
 
 ;; trailing-whitespace
 (require 'init-whitespace)
@@ -35,4 +35,6 @@
 (require 'init-helm)
 (require 'init-function-args)
 
-
+;; Extra packages which do not require any configuration
+(when *is-a-mac*
+  (require-package 'osx-location))
