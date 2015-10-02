@@ -6,15 +6,32 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 (require 'init-elpa)
+
+;; for c-mode-map, c++-mode-map definitions
+(require 'cc-mode)
+
+;; minor customizations
 (require 'init-misc)
-(require 'init-helm)
-(require 'init-company)
 (require 'init-google-c-style)
+(require 'init-smartparens)
+(require 'init-git)
+(require 'init-switch-window)
+(require 'init-nyan-mode)
+
+;; all helm related stuffs
 (require 'init-xcscope)
+(require 'init-company)
+(require 'init-helm)
+(require 'init-function-args)
+
+;; trailing-whitespace
 (require 'init-whitespace)
 (require 'init-highlight-chars)
 (require 'init-highlight-symbol)
-(require 'init-nyan-mode)
-(require 'init-switch-window)
-(require 'init-git)
+
+
+;; 3 minor modes for the perfect indent
+(require 'init-clean-aindent-mode)
+(require 'init-dtrt-indent)
+(require 'init-ws-butler)
 
