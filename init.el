@@ -37,4 +37,13 @@
 
 ;; Extra packages which do not require any configuration
 (when *is-a-mac*
-  (require-package 'osx-location))
+  (require-package 'osx-location)
+  (setq mac-option-modifier nil
+        mac-command-modifier 'meta
+        x-select-enable-clipboard t)
+  )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; init.el ends here
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
