@@ -17,7 +17,10 @@
 (require 'init-git)
 (require 'init-switch-window)
 (when (display-graphic-p)
-  (require 'init-nyan-mode))
+  (require 'init-nyan-mode)
+  ;; color-theme
+  (require 'init-color-theme)
+)
 
 ;; trailing-whitespace
 (require 'init-whitespace)
@@ -42,6 +45,8 @@
         mac-command-modifier 'meta
         x-select-enable-clipboard t)
   )
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; init.el ends here
