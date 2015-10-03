@@ -18,10 +18,7 @@
 (global-set-key (kbd "C-c e") 'end-of-buffer)
 
 ;; Compile
-(global-set-key (kbd "<f7>") (lambda ()
-                               (interactive)
-                               (setq-local compilation-read-command nil)
-                               (call-interactively 'compile)))  ;; allow exec compile cmd many times
+(global-set-key (kbd "<f7>") 'compile)
 (setq compile-command "make -j8")
 (setq compilation-scroll-output t)
 ;; Kill-compilation
