@@ -27,9 +27,7 @@
 ;; Kill-compilation
 (global-set-key (kbd "<f8>") 'kill-compilation)
 
-;; paren mode
-(show-paren-mode 1)
-(setq show-paren-delay 0)
+
 
 
 (provide 'init-misc)

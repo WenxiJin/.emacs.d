@@ -35,6 +35,7 @@
 ;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-company)
+(require 'init-company-irony)
 (require 'init-helm)
 (require 'init-function-args)
 
