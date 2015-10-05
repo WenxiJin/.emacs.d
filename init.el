@@ -37,7 +37,7 @@
 (require 'init-company)
 (require 'init-company-irony)
 (require 'init-helm)
-(require 'init-function-args)
+;; (require 'init-function-args)
 
 ;; Extra packages which do not require any configuration
 (when *is-a-mac*
