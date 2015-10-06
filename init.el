@@ -7,8 +7,20 @@
 ;;----------------------------------------------------------------------------
 (require 'init-elpa)
 
-;; for c-mode-map, c++-mode-map definitions
-(require 'cc-mode)
+;; Extra packages which do not require any configuration
+(if *is-a-mac*
+    (progn
+      (require-package 'osx-location)
+      (setq mac-option-modifier nil
+           mac-command-modifier 'meta
+           x-select-enable-clipboard t))
+  (progn
+    ;; (require 'init-spaceline)
+    ;; (require 'init-airline)  ;; require powerline patched font
+    (require 'init-sml)
+    )
+  )
+
 
 ;; minor customizations
 (require 'init-misc)
@@ -39,16 +51,9 @@
 (require 'init-helm)
 ;; (require 'init-function-args)
 
-;; Extra packages which do not require any configuration
-(when *is-a-mac*
-  (require-package 'osx-location)
-  (setq mac-option-modifier nil
-        mac-command-modifier 'meta
-        x-select-enable-clipboard t)
-  )
 
 
 
-;;----------------------------------------------------------------------------
+;;-------------------------------------------------------------------------
 ;; init.el ends here
-;;----------------------------------------------------------------------------
+;;-------------------------------------------------------------------------
