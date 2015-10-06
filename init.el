@@ -13,7 +13,7 @@
 ;; minor customizations
 (require 'init-misc)
 (require 'init-google-c-style)
-(require 'init-smartparens)
+;; (require 'init-smartparens)
 (require 'init-git)
 (require 'init-switch-window)
 (when (display-graphic-p)

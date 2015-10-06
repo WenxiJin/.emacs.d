@@ -7,6 +7,9 @@
 ;; line-number-mode, column-number-mode
 (setq line-number-mode t)
 (setq column-number-mode t)
+;; show-paren-mode
+(show-paren-mode 1)
+(setq show-paren-delay 0)
 
 ;; goto line
 (global-set-key (kbd "C-c l") 'goto-line)
