@@ -2,6 +2,7 @@ elpa/
 projectile-bookmarks.eld
 projectile.cache
 semanticdb/
+irony/
 eshell/
 tramp
 *.*~
