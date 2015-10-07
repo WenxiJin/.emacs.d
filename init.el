@@ -5,6 +5,10 @@
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
+;; keep customize settings in their own file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 (require 'init-elpa)
 
 ;; Extra packages which do not require any configuration
@@ -47,7 +51,6 @@
 ;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-company)
-(require 'init-company-irony)
 (require 'init-helm)
 ;; (require 'init-function-args)
 
