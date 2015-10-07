@@ -50,9 +50,11 @@
 
 ;; all helm related stuffs
 (require 'init-xcscope)
+(require 'init-irony)
 (require 'init-company)
+(require 'init-company-irony)
+(require 'init-company-irony-c-headers)
 (require 'init-helm)
-;; (require 'init-function-args)
 
 
 

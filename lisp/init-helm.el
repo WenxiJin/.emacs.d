@@ -61,6 +61,8 @@
 (setq projectile-switch-project-action 'helm-projectile-find-file)
 (setq projectile-switch-project-action 'helm-projectile)
 (setq projectile-enable-caching t)
+(setq projectile-file-exists-remote-cache-expire (* 10 60))
+(setq projectile-file-exists-local-cache-expire (* 5 60))
 (add-to-list 'projectile-globally-ignored-directories "backup")
 
 ;; helm-swoop
@@ -78,41 +80,6 @@
 ;; (setq helm-swoop-speed-or-color nil)
 (setq helm-swoop-move-to-line-cycle t)
 (setq helm-swoop-use-line-number-face t)
-
-
-;; ;; ac-helm
-;; (require 'ac-helm) ;; Not necessary if using ELPA package
-;; (global-set-key (kbd "C-.") 'ac-complete-with-helm)
-;; (define-key ac-complete-mode-map (kbd "C-.") 'ac-complete-with-helm)
-
-;; ;; helm-gtags, currently using cscope
-;; ;; Enable helm-gtags-mode
-;; (add-hook 'c-mode-hook 'helm-gtags-mode)
-;; (add-hook 'c++-mode-hook 'helm-gtags-mode)
-;; (add-hook 'asm-mode-hook 'helm-gtags-mode)
-;; ;; Set key bindings
-;; (eval-after-load "helm-gtags"
-;;   '(progn
-;;      (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-;;      (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-;;      (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-;;      (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-;;      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-;;      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-;;      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
-
-;; helm-ls-git
-;(require 'helm-ls-git)
-;(global-set-key (kbd "C-<f6>") 'helm-ls-git-ls)
-;(global-set-key (kbd "C-x C-d") 'helm-browse-project)
-
-
-;; helm-company
-(autoload 'helm-company "helm-company") ;; Not necessary if using ELPA package
-(eval-after-load 'company
-  '(progn
-     (define-key company-mode-map (kbd "C-:") 'helm-company)
-     (define-key company-active-map (kbd "C-:") 'helm-company)))
 
 ;; helm-cscope
 ;; Enable helm-cscope-mode
