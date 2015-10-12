@@ -25,7 +25,6 @@
     )
   )
 
-
 ;; minor customizations
 (require 'init-misc)
 (require 'init-google-c-style)
@@ -47,6 +46,9 @@
 (require 'init-clean-aindent-mode)
 (require 'init-dtrt-indent)
 (require 'init-ws-butler)
+
+;;
+(require 'init-iedit)
 
 ;; all helm related stuffs
 (require 'init-xcscope)
