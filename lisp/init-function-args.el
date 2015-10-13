@@ -1,5 +1,6 @@
 (require-package 'function-args)
 
+(require 'cc-mode)
 (require 'function-args)
 (fa-config-default)
 
