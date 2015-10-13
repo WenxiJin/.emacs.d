@@ -57,6 +57,9 @@
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 (require 'init-ac)
+;; clang-server is not setup on mac
+(unless *is-a-mac*
+  (require 'init-ac-clang))
 (require 'init-yasnippet)
 (require 'init-helm)
 
