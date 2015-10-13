@@ -60,6 +60,7 @@
 ;; clang-server is not setup on mac
 (unless *is-a-mac*
   (require 'init-ac-clang))
+;; (require 'init-ac-irony) is not available in elpa
 (require 'init-yasnippet)
 (require 'init-helm)
 
