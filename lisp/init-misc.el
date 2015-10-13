@@ -27,7 +27,8 @@
 ;; Kill-compilation
 (global-set-key (kbd "<f8>") 'kill-compilation)
 
-
+;; desktop-save-mode
+(desktop-save-mode 1)
 
 
 (provide 'init-misc)
