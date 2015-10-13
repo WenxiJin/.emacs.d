@@ -57,6 +57,7 @@
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 (require 'init-ac)
+(require 'init-yasnippet)
 (require 'init-helm)
 
 
