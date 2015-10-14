@@ -53,10 +53,12 @@
 ;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-irony)
-;; (require 'init-company)
-;; (require 'init-company-irony)
-;; (require 'init-company-irony-c-headers)
-(require 'init-ac)
+;; ------------------------------------------------------------------------
+(require 'init-company)
+(require 'init-company-irony)
+(require 'init-company-irony-c-headers)
+;; ------------------------------------------------------------------------
+;; (require 'init-ac)
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
 ;; (require 'init-ac-irony) is not available in elpa
 (require 'init-yasnippet)
