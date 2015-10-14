@@ -6,6 +6,9 @@
 ;;   '(add-to-list
 ;;     'company-backends '(company-irony-c-headers company-irony)))
 
-(add-to-list 'company-backends 'company-irony-c-headers)
+(eval-after-load 'company
+  '(progn
+     (add-to-list 'company-backends 'company-irony-c-headers)
+     ))
 
 (provide 'init-company-irony-c-headers)
