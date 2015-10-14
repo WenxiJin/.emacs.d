@@ -57,9 +57,7 @@
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 (require 'init-ac)
-;; clang-server is not setup on mac
-(unless *is-a-mac*
-  (require 'init-ac-clang))
+;; (require 'init-ac-clang)) todo: clang-server binary not found
 ;; (require 'init-ac-irony) is not available in elpa
 (require 'init-yasnippet)
 (require 'init-helm)
