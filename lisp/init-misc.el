@@ -22,7 +22,7 @@
 
 ;; Compile
 (global-set-key (kbd "<f7>") 'compile)
-(setq compile-command "make -j8")
+(setq compile-command "make -C build/ -j8")
 (setq compilation-scroll-output t)
 ;; Kill-compilation
 (global-set-key (kbd "<f8>") 'kill-compilation)
