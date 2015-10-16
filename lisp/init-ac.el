@@ -5,10 +5,14 @@
 (require 'auto-complete-config)
 ;; use default config
 (ac-config-default)
+(setq ac-auto-start 4)
+;; (define-key ac-completing-map "\t" 'ac-complete)
+;; (define-key ac-completing-map "\r" nil)
 
 (defun my:ac-c-headers-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-sources-c-headers)
+  (require 'ac-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-header-symbols t)
   (add-to-list 'achead:include-directories '"/usr/include/c++/4.8")
   (add-to-list 'achead:include-directories '"/usr/include/x86_64-linux-gnu/c++/4.8")
   (add-to-list 'achead:include-directories '"/usr/include/c++/4.8/backward")
