@@ -63,6 +63,11 @@
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
 (require 'init-yasnippet)
+
+
+
+(require 'init-flx)
+(require 'init-helm-flx)  ;; load this before loading helm
 (require 'init-helm)
 
 
