@@ -2,4 +2,4 @@
 
 (require 'magit)
 
-(provide 'magit)
+(provide 'init-magit)
