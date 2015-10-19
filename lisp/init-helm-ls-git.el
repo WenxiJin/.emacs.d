@@ -2,4 +2,4 @@
 
 (require 'helm-ls-git)
 
-(provide 'helm-ls-git)
+(provide 'init-helm-ls-git)
