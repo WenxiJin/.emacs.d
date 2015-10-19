@@ -56,6 +56,9 @@
 ;;
 (require 'init-iedit)
 
+;;
+(require 'init-flyspell-lazy)
+
 ;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-irony)
