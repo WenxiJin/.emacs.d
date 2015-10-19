@@ -56,9 +56,6 @@
 ;;
 (require 'init-iedit)
 
-;;
-(require 'init-flyspell-lazy)
-
 ;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-irony)
@@ -72,7 +69,6 @@
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
 (require 'init-yasnippet)
-
 
 
 (require 'init-flx)
