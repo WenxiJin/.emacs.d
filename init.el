@@ -56,9 +56,9 @@
 ;;
 (require 'init-iedit)
 
-;; all helm related stuffs
 (require 'init-xcscope)
 (require 'init-irony)
+(require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
 ;; (require 'init-company)
 ;; (require 'init-company-irony)
@@ -68,13 +68,14 @@
 (require 'init-ac-dabbrev)
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
-(require 'init-yasnippet)
 
 
-(require 'init-flx)
 (unless (version< emacs-version "24.4")
-  (require 'init-helm-flx)  ;; load this before loading helm
-  )
+  (progn
+    (require 'init-flx)
+    (require 'init-helm-flx)  ;; load this before loading helm
+    ))
+
 (require 'init-helm)
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)

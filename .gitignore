@@ -4,6 +4,7 @@ projectile.cache
 semanticdb/
 irony/
 eshell/
+/snippets
 ac-comphist.dat
 tramp
 *.*~

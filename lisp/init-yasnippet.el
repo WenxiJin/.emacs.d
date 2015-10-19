@@ -8,6 +8,7 @@
 ;;         "/path/to/yasnippet/snippets"         ;; the default collection
 ;;         ))
 
+(add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")  ;; git@github.com:AndreaCrotti/yasnippet-snippets.git
 (yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
 
 
