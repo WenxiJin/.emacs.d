@@ -1,11 +1,9 @@
 ;; helm
 (require-package 'helm) ;; install helm
 (require-package 'helm-core)
-(require-package 'helm-projectile)
 (require-package 'helm-gtags)
-(require-package 'helm-swoop)
 (require-package 'helm-company)
-(require-package 'helm-cscope)
+
 
 (require 'helm)
 (require 'helm-config)
@@ -52,47 +50,6 @@
 (setq helm-lisp-fuzzy-completion t)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (global-set-key (kbd "C-c h x") 'helm-register)
-
-;; helm-projectile
-(projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
-(setq projectile-indexing-method 'alien)
-(setq projectile-switch-project-action 'helm-projectile-find-file)
-(setq projectile-switch-project-action 'helm-projectile)
-(setq projectile-enable-caching t)
-(setq projectile-file-exists-remote-cache-expire (* 10 60))
-(setq projectile-file-exists-local-cache-expire (* 5 60))
-(add-to-list 'projectile-globally-ignored-directories "backup")
-
-;; helm-swoop
-(require 'helm-swoop)
-(global-set-key (kbd "M-i") 'helm-swoop)
-(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
-(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
-(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
-(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
-(define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
-(setq helm-multi-swoop-edit-save t)
-(setq helm-swoop-split-with-multiple-windows nil)
-(setq helm-swoop-split-direction 'split-window-vertically)
-;; split-window-horizontally
-;; (setq helm-swoop-speed-or-color nil)
-(setq helm-swoop-move-to-line-cycle t)
-(setq helm-swoop-use-line-number-face t)
-
-;; helm-cscope
-;; Enable helm-cscope-mode
-(add-hook 'c-mode-hook 'helm-cscope-mode)
-(add-hook 'c++-mode-hook 'helm-cscope-mode)
-;; Set key bindings--define-key
-(eval-after-load "helm-cscope"
-  '(progn
-     (define-key helm-cscope-mode-map (kbd "M-t") 'helm-cscope-find-this-symbol)
-     (define-key helm-cscope-mode-map (kbd "M-r") 'helm-cscope-find-global-definition)
-     (define-key helm-cscope-mode-map (kbd "M-g M-c") 'helm-cscope-find-called-function)
-     (define-key helm-cscope-mode-map (kbd "M-g M-p") 'helm-cscope-find-calling-this-funtcion)
-     (define-key helm-cscope-mode-map (kbd "M-s") 'helm-cscope-select)))
 
 
 (provide 'init-helm)

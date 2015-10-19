@@ -74,10 +74,17 @@
 
 (require 'init-flx)
 (unless (version< emacs-version "24.4")
-  (require 'init-helm-flx)  ;; load this before loading helm  
+  (require 'init-helm-flx)  ;; load this before loading helm
   )
 (require 'init-helm)
+(require 'init-helm-projectile)
+(require 'init-helm-swoop)
+(require 'init-helm-cscope)
 
+;; git-version >= 1.9.4
+;; (require 'init-magit)
+;; (require 'init-helm-git)
+;; (require 'init-helm-ls-git)
 
 
 
