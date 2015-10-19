@@ -82,7 +82,6 @@
 
 ;; git-version >= 1.9.4
 ;; (require 'init-magit)
-;; (require 'init-helm-git)
 ;; (require 'init-helm-ls-git)
 
 
