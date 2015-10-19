@@ -73,7 +73,7 @@
 
 
 (require 'init-flx)
-(when (version= emacs-version "24.4")
+(unless (version< emacs-version "24.4")
   (require 'init-helm-flx)  ;; load this before loading helm  
   )
 (require 'init-helm)
