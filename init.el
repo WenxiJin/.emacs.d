@@ -56,7 +56,6 @@
 ;;
 (require 'init-iedit)
 
-(require 'init-xcscope)
 (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
@@ -68,7 +67,8 @@
 (require 'init-ac-dabbrev)
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
-
+;; ------------------------------------------------------------------------
+(require 'init-xcscope)  ;; load this after ac
 
 (unless (version< emacs-version "24.4")
   (progn
