@@ -24,11 +24,6 @@
       (setq mac-option-modifier nil
            mac-command-modifier 'meta
            x-select-enable-clipboard t))
-  (progn
-    ;; (require 'init-spaceline)
-    (require 'init-airline)  ;; require powerline patched font
-    ;; (require 'init-sml)
-    )
   )
 
 ;; minor customizations
@@ -37,11 +32,18 @@
 ;; (require 'init-smartparens)
 (require 'init-git)
 (require 'init-switch-window)
-(when (display-graphic-p)
-  (require 'init-nyan-mode)
-  ;; color-theme
-  (require 'init-color-theme)
-)
+(if (display-graphic-p)
+    (progn
+      (require 'init-nyan-mode)
+      ;; color-theme
+      (require 'init-color-theme)
+      )
+  (progn
+    ;; (require 'init-spaceline)
+    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-sml)
+    )
+  )
 
 ;; trailing-whitespace
 (require 'init-whitespace)
