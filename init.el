@@ -26,8 +26,8 @@
            x-select-enable-clipboard t))
   (progn
     ;; (require 'init-spaceline)
-    ;; (require 'init-airline)  ;; require powerline patched font
-    (require 'init-sml)
+    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-sml)
     )
   )
 
