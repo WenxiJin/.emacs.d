@@ -23,7 +23,6 @@
   (add-to-list 'achead:include-directories '"/usr/include")
   (add-to-list 'achead:include-directories '"/usr/local/include")
   (add-to-list 'achead:include-directories '"/usr/include/x86_64-linux-gnu")
-  (add-to-list 'achead:include-directories '"/usr/lib/gcc/x86_64-linux-gnu/4.8/include")
 )
 (add-hook 'c++-mode-hook 'my:ac-c-headers-init)
 (add-hook 'c-mode-hook 'my:ac-c-headers-init)
