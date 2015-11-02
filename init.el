@@ -49,6 +49,7 @@
 (require 'init-whitespace)
 (require 'init-highlight-chars)
 (require 'init-highlight-symbol)
+(require 'init-highlight-numbers)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
