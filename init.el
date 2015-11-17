@@ -59,15 +59,15 @@
 ;;
 (require 'init-iedit)
 
-(require 'init-irony)
+;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
-;; (require 'init-company)
+(require 'init-company)
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 ;; ------------------------------------------------------------------------
-(require 'init-ac)
-(require 'init-ac-dabbrev)
+;; (require 'init-ac)
+;; (require 'init-ac-dabbrev)
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
 ;; ------------------------------------------------------------------------
