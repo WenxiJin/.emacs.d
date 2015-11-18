@@ -50,6 +50,7 @@
 (require 'init-highlight-chars)
 (require 'init-highlight-symbol)
 (require 'init-highlight-numbers)
+(require 'init-highlight-current-line)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
@@ -83,6 +84,7 @@
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
 (require 'init-helm-cscope)
+(require 'init-helm-gtags)
 
 ;; git-version >= 1.9.4
 ;; (require 'init-magit)
