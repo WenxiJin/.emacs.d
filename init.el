@@ -64,6 +64,7 @@
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
 (require 'init-company)
+(require 'init-company-statistics)
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 ;; ------------------------------------------------------------------------
