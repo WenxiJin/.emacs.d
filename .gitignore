@@ -4,6 +4,7 @@ irony/
 eshell/
 ac-comphist.dat
 projectile-bookmarks.eld
+.cache/
 projectile.cache
 company-statistics-cache.el
 tramp
