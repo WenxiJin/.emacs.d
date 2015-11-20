@@ -85,7 +85,7 @@
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
 (require 'init-helm-cscope)
-(require 'init-helm-gtags)
+;; (require 'init-helm-gtags)  ;; Failed: update TAGS(2)
 
 ;; git-version >= 1.9.4
 ;; (require 'init-magit)
