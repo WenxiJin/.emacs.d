@@ -51,6 +51,7 @@
 (require 'init-highlight-symbol)
 (require 'init-highlight-numbers)
 (require 'init-highlight-current-line)
+(require 'init-diff-hl)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
@@ -63,13 +64,13 @@
 ;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
-(require 'init-company)
-(require 'init-company-statistics)
+;; (require 'init-company)
+;; (require 'init-company-statistics)
 ;; (require 'init-company-irony)
 ;; (require 'init-company-irony-c-headers)
 ;; ------------------------------------------------------------------------
-;; (require 'init-ac)
-;; (require 'init-ac-dabbrev)
+(require 'init-ac)
+(require 'init-ac-dabbrev)
 ;; (require 'init-ac-irony) is not available in elpa
 ;; (require 'init-ac-clang)) todo: clang-server binary not found
 ;; ------------------------------------------------------------------------
