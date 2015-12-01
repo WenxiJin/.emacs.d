@@ -5,11 +5,7 @@
 (require 'auto-complete-config)
 ;; use default config
 (ac-config-default)
-(setq ac-auto-start 4
-      ac-delay 0.2
-      ac-quick-help-delay 1.
-      ac-use-fuzzy t
-      ac-fuzzy-enable t)
+(setq ac-auto-start 4)
 
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
