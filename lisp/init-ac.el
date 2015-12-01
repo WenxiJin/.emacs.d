@@ -5,7 +5,7 @@
 (require 'auto-complete-config)
 ;; use default config
 (ac-config-default)
-(setq ac-auto-start 0
+(setq ac-auto-start 4
       ac-delay 0.2
       ac-quick-help-delay 1.
       ac-use-fuzzy t
