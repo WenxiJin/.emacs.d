@@ -1,5 +1,6 @@
 elpa/
 semanticdb/
+ede-projects.el
 irony/
 eshell/
 ac-comphist.dat

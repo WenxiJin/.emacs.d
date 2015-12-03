@@ -5,7 +5,8 @@
 (require 'auto-complete-config)
 ;; use default config
 (ac-config-default)
-(setq ac-auto-start 4)
+(setq ac-auto-start 4
+      ac-candidate-limit 100)
 
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
