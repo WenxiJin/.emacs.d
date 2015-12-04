@@ -5,8 +5,9 @@
 (require 'auto-complete-config)
 ;; use default config
 (ac-config-default)
-(setq ac-auto-start 4
-      ac-candidate-limit 100)
+(setq ac-auto-start 4)
+(setq ac-candidate-limit 20)
+(setq ac-menu-height 20)
 
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
 ;;; if the word exists in yasnippet, pressing tab will cause yasnippet to
@@ -33,6 +34,8 @@
   (< (buffer-size other-buffer) (* 1 1024 1024)))
 (setq dabbrev-friend-buffer-function 'my:dabbrev-friend-buffer)
 
+;; turn on ede
+(global-ede-mode 1)
 ;; turn on semantic
 (semantic-mode 1)
 (defun my:add-semantic-to-autocomplete()

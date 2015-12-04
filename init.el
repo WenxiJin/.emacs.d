@@ -92,6 +92,8 @@
 ;; (require 'init-magit)
 ;; (require 'init-helm-ls-git)
 
+;; gccsense
+(require 'init-gccsense)
 
 
 ;;-------------------------------------------------------------------------
