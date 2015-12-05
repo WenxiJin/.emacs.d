@@ -92,8 +92,8 @@
 ;; (require 'init-magit)
 ;; (require 'init-helm-ls-git)
 
-;; gccsense
-(require 'init-gccsense)
+;; gccsense - built-in gcc/g++ 4.4, not for cross-compile
+;; (require 'init-gccsense)
 
 
 ;;-------------------------------------------------------------------------

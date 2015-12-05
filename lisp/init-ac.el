@@ -6,7 +6,7 @@
 ;; use default config
 (ac-config-default)
 (setq ac-auto-start 4)
-(setq ac-candidate-limit 20)
+(setq ac-candidate-limit 100)
 (setq ac-menu-height 20)
 
 ;;; set the trigger key so that it can work together with yasnippet on tab key,
