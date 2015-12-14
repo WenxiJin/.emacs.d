@@ -34,16 +34,14 @@
   (< (buffer-size other-buffer) (* 1 1024 1024)))
 (setq dabbrev-friend-buffer-function 'my:dabbrev-friend-buffer)
 
-;; turn on ede
-(global-ede-mode 1)
-;; turn on semantic
-(semantic-mode 1)
-(defun my:add-semantic-to-autocomplete()
-  (add-to-list 'ac-sources 'ac-source-semantic)
-  )
-(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
-; turn on automatic reparsing of open buffers in semantic
-(global-semantic-idle-scheduler-mode 1)
+;; ;; turn on semantic
+;; (semantic-mode 1)
+;; (defun my:add-semantic-to-autocomplete()
+;;   (add-to-list 'ac-sources 'ac-source-semantic)
+;;   )
+;; (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+;; ; turn on automatic reparsing of open buffers in semantic
+;; (global-semantic-idle-scheduler-mode 1)
 
 
 (provide 'init-ac)

@@ -61,6 +61,9 @@
 ;;
 (require 'init-iedit)
 
+;;
+(require 'init-undo-tree)
+
 ;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
