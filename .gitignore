@@ -10,4 +10,5 @@ projectile.cache
 company-statistics-cache.el
 tramp
 gccsense.el
+bookmarks
 *.*~
