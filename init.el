@@ -51,7 +51,7 @@
 (require 'init-highlight-symbol)
 (require 'init-highlight-numbers)
 (require 'init-highlight-current-line)
-(require 'init-diff-hl)
+;; (require 'init-diff-hl)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
@@ -98,6 +98,7 @@
 ;; gccsense - built-in gcc/g++ 4.4, not for cross-compile
 ;; (require 'init-gccsense)
 
+(require 'init-cmake-mode)
 
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
