@@ -99,7 +99,10 @@
 ;; (require 'init-gccsense)
 
 (require 'init-cmake-mode)
+;; enable narrow-to region feature
+(put 'narrow-to-region 'disabled nil)
 
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
 ;;-------------------------------------------------------------------------
+
