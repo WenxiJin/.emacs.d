@@ -28,5 +28,10 @@
 (global-set-key (kbd "<f8>") 'kill-compilation)
 
 
+;; stop creating backup~ files
+(setq make-backup-files nil)
+;; stop creating #autosave# files
+(setq auto-save-default nil)
+
 
 (provide 'init-misc)
