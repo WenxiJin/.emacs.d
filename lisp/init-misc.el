@@ -15,10 +15,10 @@
 (global-set-key (kbd "C-c l") 'goto-line)
 
 ;; go to beginning-of-buffer
-(global-set-key (kbd "C-c a") 'beginning-of-buffer)
+;; (global-set-key (kbd "C-c a") 'beginning-of-buffer)
 
 ;; goto end-of-buffer
-(global-set-key (kbd "C-c e") 'end-of-buffer)
+;; (global-set-key (kbd "C-c e") 'end-of-buffer)
 
 ;; Compile
 (global-set-key (kbd "<f7>") 'compile)
