@@ -65,6 +65,9 @@
 ;;
 (require 'init-undo-tree)
 
+;;
+(require 'init-which-key)
+
 ;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
