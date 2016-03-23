@@ -38,13 +38,11 @@
       (require 'init-nyan-mode)
       ;; color-theme
       (require 'init-sublime-themes)
-      (load-theme 'spolsky t)
       )
   (progn
     ;; (require 'init-spaceline)
-    ;; (require 'init-airline)  ;; require powerline patched font
+    (require 'init-airline)  ;; require powerline patched font
     ;; (require 'init-solarized)
-    ;; (load-theme 'solarized t)
     ;; (require 'init-sml)
     )
   )
@@ -96,6 +94,7 @@
 (require 'init-helm)
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
+(require 'init-helm-themes)
 ;; (require 'init-helm-cscope)
 ;; (require 'init-helm-gtags)  ;; Failed: update TAGS(2)
 
