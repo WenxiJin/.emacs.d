@@ -43,8 +43,8 @@
   (progn
     ;; (require 'init-spaceline)
     ;; (require 'init-airline)  ;; require powerline patched font
-    (require 'init-solarized)
-    (load-theme 'solarized t)
+    ;; (require 'init-solarized)
+    ;; (load-theme 'solarized t)
     ;; (require 'init-sml)
     )
   )
