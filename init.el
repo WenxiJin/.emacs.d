@@ -32,7 +32,7 @@
 (require 'google-coding-style)
 ;; (require 'init-smartparens)
 (require 'init-git)
-(require 'init-switch-window)
+
 (if (display-graphic-p)
     (progn
       (require 'init-nyan-mode)
@@ -95,7 +95,7 @@
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
 (require 'init-helm-themes)
-;; (require 'init-helm-cscope)
+(require 'init-helm-cscope)
 ;; (require 'init-helm-gtags)  ;; Failed: update TAGS(2)
 
 ;; git-version >= 1.9.4
