@@ -109,6 +109,8 @@
 ;; enable narrow-to region feature
 (put 'narrow-to-region 'disabled nil)
 
+(require 'init-ace-window)
+
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
 ;;-------------------------------------------------------------------------
