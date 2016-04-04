@@ -110,6 +110,7 @@
 (put 'narrow-to-region 'disabled nil)
 
 (require 'init-ace-window)
+(require 'init-org)
 
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
