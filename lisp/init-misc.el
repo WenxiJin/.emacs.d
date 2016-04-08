@@ -2,6 +2,7 @@
 (setq inhibit-splash-screen t)
 
 ;; revert buffer
+(global-auto-revert-mode 1)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 
 ;; line-number-mode, column-number-mode
@@ -10,9 +11,6 @@
 ;; show-paren-mode
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-
-;; goto line
-(global-set-key (kbd "C-c l") 'goto-line)
 
 ;; go to beginning-of-buffer
 ;; (global-set-key (kbd "C-c a") 'beginning-of-buffer)
