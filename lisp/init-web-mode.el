@@ -25,6 +25,7 @@
   (setq web-mode-style-padding 1)
   (setq web-mode-script-padding 1)
   (setq web-mode-block-padding 0)
+  (setq-default indent-tabs-mode nil)
   (define-key web-mode-map (kbd "C-n") 'web-mode-tag-match)
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
