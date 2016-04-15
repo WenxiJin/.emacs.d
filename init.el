@@ -61,14 +61,10 @@
 (require 'init-dtrt-indent)
 (require 'init-ws-butler)
 
-;;
 (require 'init-iedit)
-
-;;
 (require 'init-undo-tree)
-
-;;
 (require 'init-which-key)
+(require 'init-avy)
 
 ;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
@@ -115,6 +111,7 @@
 (require 'init-markdown)
 (require 'init-adoc-mode)
 (require 'init-web-mode)
+
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
 ;;-------------------------------------------------------------------------
