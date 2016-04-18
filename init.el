@@ -34,21 +34,6 @@
 (require 'init-rainbow-delimiters)
 (require 'init-git)
 
-(if (display-graphic-p)
-    (progn
-      (require 'init-nyan-mode)
-      ;; color-theme
-      (require 'init-sublime-themes)
-      )
-  (progn
-    ;; (require 'init-spaceline)
-    (require 'init-airline)  ;; require powerline patched font
-    ;; (require 'init-solarized)
-    ;; (require 'init-sml)
-    (require 'init-spacemacs-theme)
-    )
-  )
-
 ;; trailing-whitespace
 (require 'init-whitespace)
 ;; (require 'init-highlight-chars)  ;; conflict with helm highlight
@@ -112,6 +97,24 @@
 (require 'init-markdown)
 (require 'init-adoc-mode)
 (require 'init-web-mode)
+
+(if (display-graphic-p)
+    (progn
+      (require 'init-nyan-mode)
+      )
+  (progn
+    ;; (require 'init-spaceline)
+    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-solarized)
+    ;; (require 'init-sml)
+    )
+  )
+
+;; load color-theme at last, so that spacemacs-theme could overwrite any face
+;; attribute
+;; (require 'init-sublime-themes)
+(require 'init-spacemacs-theme)
+
 
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
