@@ -55,6 +55,7 @@
 (require 'init-highlight-numbers)
 (require 'init-highlight-current-line)
 ;; (require 'init-diff-hl)
+(require 'init-rainbow-delimiters)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
