@@ -30,7 +30,7 @@
 (require 'init-misc)
 ;; (require 'init-google-c-style)
 (require 'google-coding-style)
-;; (require 'init-smartparens)
+(require 'init-smartparens)
 (require 'init-git)
 
 (if (display-graphic-p)
