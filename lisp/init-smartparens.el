@@ -8,6 +8,7 @@
                     :foreground nil)
 
 (set-face-attribute 'sp-show-pair-match-face nil
+                    :foreground "red"
                     :weight 'bold
                     :underline t
                     :inherit 'bold)
