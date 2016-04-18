@@ -8,10 +8,10 @@
                     :foreground nil)
 
 (set-face-attribute 'sp-show-pair-match-face nil
-                    :foreground "red"
                     :weight 'bold
-                    :underline t)
+                    :underline t
+                    :inherit 'bold)
 
-(add-hook 'prog-mode-hook #'smartparens-mode)
+(show-smartparens-global-mode t)
 
 (provide 'init-smartparens)
