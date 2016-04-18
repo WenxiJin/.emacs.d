@@ -31,6 +31,7 @@
 ;; (require 'init-google-c-style)
 (require 'google-coding-style)
 (require 'init-smartparens)
+(require 'init-rainbow-delimiters)
 (require 'init-git)
 
 (if (display-graphic-p)
@@ -48,7 +49,6 @@
     )
   )
 
-
 ;; trailing-whitespace
 (require 'init-whitespace)
 ;; (require 'init-highlight-chars)  ;; conflict with helm highlight
@@ -56,7 +56,6 @@
 (require 'init-highlight-numbers)
 (require 'init-highlight-current-line)
 ;; (require 'init-diff-hl)
-(require 'init-rainbow-delimiters)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
