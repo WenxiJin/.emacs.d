@@ -3,15 +3,17 @@
 (require 'smartparens)
 (require 'smartparens-config)
 
-(set-face-attribute 'sp-pair-overlay-face nil
-                    :background "yellow"
-                    :foreground nil)
+;; ===================================================================
+;; Hand over to spacemacs-theme
+;; (set-face-attribute 'sp-pair-overlay-face nil
+;;                     :background "yellow"
+;;                     :foreground nil)
 
-(set-face-attribute 'sp-show-pair-match-face nil
-                    :foreground "red"
-                    :weight 'bold
-                    :underline t
-                    :inherit 'bold)
+;; (set-face-attribute 'sp-show-pair-match-face nil
+;;                     :foreground "red"
+;;                     :weight 'bold
+;;                     :underline t
+;;                     :inherit 'bold)
 
 (show-smartparens-global-mode t)
 

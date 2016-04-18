@@ -44,6 +44,7 @@
     (require 'init-airline)  ;; require powerline patched font
     ;; (require 'init-solarized)
     ;; (require 'init-sml)
+    (require 'init-spacemacs-theme)
     )
   )
 
