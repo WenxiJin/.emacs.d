@@ -40,9 +40,11 @@
 (global-set-key (kbd "C-x C-g") 'helm-do-grep)
 ;; sudo apt-get install ack-grep
 ;; cat "--type-set=icli=.icli" > ~/.ackrc
+;; ack-grep --dump, to check syntax, it is perl
+;; -k/--known-types Include only files of types that ack-grep recognizes.
 (when (executable-find "ack-grep")
   (setq helm-grep-default-command "ack-grep -Hn --no-group --no-color %e %p %f"
-        helm-grep-default-recurse-command "ack-grep -H --no-group --no-color %e %p %f"))
+        helm-grep-default-recurse-command "ack-grep -H --no-group --no-color -k %p %f"))
 (setq helm-semantic-fuzzy-match t
       helm-imenu-fuzzy-match    t)
 (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
