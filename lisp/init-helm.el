@@ -38,6 +38,8 @@
       helm-recentf-fuzzy-match    t)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-g") 'helm-do-grep)
+;; sudo apt-get install ack-grep
+;; cat "--type-set=icli=.icli" > ~/.ackrc
 (when (executable-find "ack-grep")
   (setq helm-grep-default-command "ack-grep -Hn --no-group --no-color %e %p %f"
         helm-grep-default-recurse-command "ack-grep -H --no-group --no-color %e %p %f"))
