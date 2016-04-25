@@ -44,7 +44,7 @@
 ;; -k/--known-types Include only files of types that ack-grep recognizes.
 (when (executable-find "ack-grep")
   (setq helm-grep-default-command "ack-grep -Hn --color --smart-case --no-group %e %p %f"
-        helm-grep-default-recurse-command "ack-grep -H --color --smart-case --no-group %p %f"))
+        helm-grep-default-recurse-command "ack-grep -H --color --smart-case --no-group %e %p %f"))
 (setq helm-semantic-fuzzy-match t
       helm-imenu-fuzzy-match    t)
 (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
