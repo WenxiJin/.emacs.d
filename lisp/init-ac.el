@@ -16,19 +16,6 @@
 (ac-set-trigger-key "<tab>")
 
 
-(defun my:ac-c-headers-init ()
-  (require 'ac-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-header-symbols t)
-  ;; gcc -xc++ -E -v
-  (add-to-list 'achead:include-directories '"/usr/include")
-  (add-to-list 'achead:include-directories '"/usr/local/include")
-  (add-to-list 'achead:include-directories '"/usr/include/x86_64-linux-gnu")
-)
-(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
-(add-hook 'c-mode-hook 'my:ac-c-headers-init)
-
-
 ;; Exclude very large buffers from dabbrev
 (defun my:dabbrev-friend-buffer (other-buffer)
   (< (buffer-size other-buffer) (* 1 1024 1024)))
