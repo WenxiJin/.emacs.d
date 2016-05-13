@@ -63,7 +63,10 @@
 (require 'init-ac)
 (require 'init-ac-dabbrev)
 ;; (require 'init-ac-irony) is not available in elpa
-;; (require 'init-ac-clang)) todo: clang-server binary not found
+(when (executable-find "clang-server")
+  (message "Found clang-server")
+  (require 'init-ac-clang))
+
 ;; ------------------------------------------------------------------------
 (require 'init-xcscope)  ;; load this after ac
 
