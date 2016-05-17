@@ -62,13 +62,12 @@
 ;; ------------------------------------------------------------------------
 (require 'init-ac)
 (require 'init-ac-dabbrev)
-;; (require 'init-ac-irony) is not available in elpa
-(when (executable-find "clang-server")
-  (message "Found clang-server")
-  (require 'init-ac-clang))
+;; (when (executable-find "clang-server")
+;;   (message "Found clang-server")
+;;   (require 'init-ac-clang))
 
 ;; ------------------------------------------------------------------------
-(require 'init-xcscope)  ;; load this after ac
+(require 'init-xcscope)  ;; Conflict against ac-clang
 
 (unless (version< emacs-version "24.4")
   (progn
@@ -80,9 +79,9 @@
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
 (require 'init-helm-themes)
-(require 'init-helm-cscope)
+;; (require 'init-helm-cscope)
 (require 'init-helm-ag)
-;; (require 'init-helm-gtags)  ;; Failed: update TAGS(2)
+(require 'init-helm-gtags)
 
 ;; git-version >= 1.9.4
 ;; (require 'init-magit)
@@ -118,6 +117,37 @@
 ;; attribute
 ;; (require 'init-sublime-themes)
 (require 'init-spacemacs-theme)
+
+
+(require 'init-rebox2)
+(require 'init-expand-region)
+;; Group: File -> vlf
+(require 'init-vlf)
+;; Group: Environment -> Windows -> Golden Ratio
+(require 'init-golden-ratio)
+;; Group: Help -> Info+
+(require 'init-info+)
+;; Group: Help -> Rainbow
+(require 'init-rainbow)
+
+(require 'init-function-args)
+
+;; TODO - Group all the modules
+;; (require 'setup-applications)
+;; (require 'setup-communication)
+;; (require 'setup-convenience)
+;; (require 'setup-data)
+;; (require 'setup-development)
+;; (require 'setup-editing)
+;; (require 'setup-environment)
+;; (require 'setup-external)
+;; (require 'setup-faces-and-ui)
+;; (require 'setup-files)
+;; (require 'setup-help)
+;; (require 'setup-programming)
+;; (require 'setup-text)
+;; (require 'setup-local)
+
 
 
 ;;-------------------------------------------------------------------------

@@ -16,9 +16,13 @@
 ;; (global-set-key (kbd "C-c e") 'end-of-buffer)
 
 ;; Compile
+(require 'compile)
+(setq compilation-ask-about-save nil          ; Just save before compiling
+      compilation-always-kill t               ; Just kill old compile processes before starting the new one
+      compilation-scroll-output 'first-error) ; Automatically scroll to first
 (global-set-key (kbd "<f7>") 'compile)
-(setq compile-command "make -j8")
-(setq compilation-scroll-output t)
+(setq compile-command "make -C build/ -j8")
+
 ;; Kill-compilation
 (global-set-key (kbd "<f8>") 'kill-compilation)
 
