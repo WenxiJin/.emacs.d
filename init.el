@@ -130,7 +130,7 @@
 ;; Group: Help -> Rainbow
 (require 'init-rainbow)
 
-(require 'init-function-args)
+;; (require 'init-function-args)
 
 ;; TODO - Group all the modules
 ;; (require 'setup-applications)
