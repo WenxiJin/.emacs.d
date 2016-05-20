@@ -129,6 +129,9 @@
 (require 'init-info+)
 ;; Group: Help -> Rainbow
 (require 'init-rainbow)
+;; Group: Convenience -> Workgroups2
+(require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
+;; after everything is properly initialized
 
 ;; (require 'init-function-args)
 
