@@ -22,4 +22,8 @@
      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
           (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
 
+;; For "FAILED: update TAGS(2)" error when "helm-gtags-update-tags"
+;; Install GNU global higher than 6.2.3 and "helm-gtags-create-tags"
+
+
 (provide 'init-helm-gtags)
