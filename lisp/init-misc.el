@@ -1,9 +1,17 @@
 ;; no startup screen
 (setq inhibit-splash-screen t)
 
+;; disable tab indent
+(setq-default
+ indent-tabs-mode nil)
+
 ;; revert buffer
 (global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t
+      auto-revert-verbose nil)
 (global-set-key (kbd "C-c r") 'revert-buffer)
+
+(transient-mark-mode t)
 
 ;; line-number-mode, column-number-mode
 (setq line-number-mode t)
