@@ -40,6 +40,7 @@
 (require 'init-highlight-symbol)
 (require 'init-highlight-numbers)
 (require 'init-highlight-current-line)
+;; (require 'init-highlight-indentation)
 ;; (require 'init-diff-hl)
 
 ;; 3 minor modes for the perfect indent
