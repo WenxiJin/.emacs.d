@@ -49,6 +49,7 @@
 (require 'init-ws-butler)
 
 (require 'init-iedit)
+(require 'init-multiple-cursors)
 (require 'init-undo-tree)
 (require 'init-which-key)
 (require 'init-avy)
@@ -118,7 +119,6 @@
 ;; attribute
 ;; (require 'init-sublime-themes)
 (require 'init-spacemacs-theme)
-
 
 (require 'init-rebox2)
 (require 'init-expand-region)
