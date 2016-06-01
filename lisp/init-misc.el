@@ -43,5 +43,7 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 ;; set the default width of fill-column
 (setq-default fill-column 80)
+;; Display system time and load
+(display-time-mode t)
 
 (provide 'init-misc)
