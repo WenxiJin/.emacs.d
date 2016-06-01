@@ -118,7 +118,8 @@
 ;; load color-theme at last, so that spacemacs-theme could overwrite any face
 ;; attribute
 ;; (require 'init-sublime-themes)
-(require 'init-spacemacs-theme)
+;; (require 'init-spacemacs-theme)
+(require 'init-atom-one-dark-theme)
 
 (require 'init-rebox2)
 (require 'init-expand-region)
