@@ -121,6 +121,9 @@
 (require 'init-spacemacs-theme)
 ;; (require 'init-atom-one-dark-theme)
 
+;; An interface to the Eclipse IDE
+(require 'init-emacs-eclim)
+
 (require 'init-rebox2)
 (require 'init-expand-region)
 ;; Group: File -> vlf
