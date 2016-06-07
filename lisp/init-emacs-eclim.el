@@ -8,13 +8,44 @@
 
 ;; emacs-eclim tries its best to locate Eclipse installation.
 ;; if you have Eclipse installed somewhere else, try to add this
-;; (custom-set-variables '(eclim-eclipse-dirs '("~/nonStandard/eclipse"))
-;;  '(eclim-executable "~/nonStandard/eclipse/eclim"))
+;; ----------------------------------------------------------------------------
+;; HOW TO INSTALL ECLIPSE ON UBUNTU?
+;; $ cd ~/Downloads/ && wget https://blabla.tar.gz
+;; $ cd /opt/ && sudo tar -zxvf ~/Downloads/eclipse-*.tar.gz
+;; eclipse is installed under /opt/eclipse/. now
+;; HOW TO INSTALL ECLIM?
+;; http://eclim.org/install.html, graphical installer is preferred
+;; install java, c++ plugins
+;; symbol link eclim and eclimd executables
+;; ----------------------------------------------------------------------------
+;; wjin@soft-dev10 ~/project/webstax2-apple (master) $ ll /opt/eclipse/
+;; total 640K
+;; drwxrwxr-x   8 root users 4.0K Jun  7 11:39 ./
+;; drwxr-xr-x  15 root root  4.0K Jun  6 09:14 ../
+;; -rw-rw-r--   1 root users 270K Feb 18 09:43 artifacts.xml
+;; drwxrwxr-x   4 root users 4.0K Feb 18 09:43 configuration/
+;; drwxrwxr-x   2 root users 4.0K Feb 18 09:43 dropins/
+;; lrwxrwxrwx   1 root root    80 Jun  7 11:38 eclim -> /home/wjin/.eclipse/org.eclipse.platform_4.5.2_1473617060_linux_gtk_x86_64/eclim*
+;; lrwxrwxrwx   1 root root    81 Jun  7 11:39 eclimd -> /home/wjin/.eclipse/org.eclipse.platform_4.5.2_1473617060_linux_gtk_x86_64/eclimd*
+;; -rwxr-xr-x   1 root users  78K Feb 12 22:55 eclipse*
+;; -rw-rw-r--   1 root users  448 Feb 18 09:43 eclipse.ini
+;; -rw-rw-r--   1 root users   60 Feb  3 16:08 .eclipseproduct
+;; drwxrwxr-x 174 root users  20K Feb 18 09:43 features/
+;; -rwxr-xr-x   1 root users 138K Feb 12 22:55 icon.xpm*
+;; drwxrwxr-x   4 root users 4.0K Feb 18 09:43 p2/
+;; drwxrwxr-x  19 root users  88K Feb 18 09:43 plugins/
+;; drwxrwxr-x   2 root users 4.0K Feb 18 09:43 readme/
+(custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
+                      '(eclim-executable "/opt/eclipse/eclim"))
+;; ----------------------------------------------------------------------------
+;; NOTE: start-eclimd only works in emacs GUI
+;; NOTE: /opt/eclipse/eclimd only works in linux shell, not terminal emulator
+;; ----------------------------------------------------------------------------
 
 ;; You can either invoke (display-local-help) manually or activate automatic
 ;; display of local help by adding the following to .emacs
 (setq help-at-pt-display-when-idle t)
-(setq help-at-pt-timer-delay 0.1)
+(setq help-at-pt-timer-delay 0.5)  ;; 0.1 by default
 (help-at-pt-set-timer)
 
 ;; Auto-complete
