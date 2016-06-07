@@ -1,5 +1,8 @@
 (require-package 'emacs-eclim)
 
+;; ----------------------------------------------------------------------------
+;; emacs-eclim, company are default packages for java in spacemacs
+;; ----------------------------------------------------------------------------
 (require 'eclim)
 (global-eclim-mode)
 
