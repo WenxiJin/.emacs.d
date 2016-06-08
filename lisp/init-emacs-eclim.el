@@ -4,7 +4,8 @@
 ;; emacs-eclim, company are default packages for java in spacemacs
 ;; ----------------------------------------------------------------------------
 (require 'eclim)
-(global-eclim-mode)
+;; only enable it in java mode
+;; (global-eclim-mode)
 
 ;; if you want to control eclimd from emacs, also add:
 (require 'eclimd)
@@ -57,8 +58,14 @@
 (ac-config-default)
 ;; add the emacs-eclim source
 (require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+;; only enable it in java mode
+;; (ac-emacs-eclim-config)
 
+(add-hook 'java-mode-hook
+          (lambda ()
+            (eclim-mode)
+            (ac-emacs-eclim-config)
+            (message "Enabled eclim-mode...")))
 
 ;; Company
 ;; (require 'company)
