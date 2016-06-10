@@ -48,33 +48,37 @@
 
 ;; You can either invoke (display-local-help) manually or activate automatic
 ;; display of local help by adding the following to .emacs
-(setq help-at-pt-display-when-idle t)
-(setq help-at-pt-timer-delay 0.5)  ;; 0.1 by default
-(help-at-pt-set-timer)
+;; (setq help-at-pt-display-when-idle t)
+;; (setq help-at-pt-timer-delay 0.5)  ;; 0.1 by default
+;; (help-at-pt-set-timer)
 
 ;; Auto-complete
 ;; regular auto-complete initialization
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 ;; add the emacs-eclim source
-(require 'ac-emacs-eclim-source)
+;; (require 'ac-emacs-eclim-source)
 ;; only enable it in java mode
 ;; (ac-emacs-eclim-config)
 
-(add-hook 'java-mode-hook
-          (lambda ()
-            (eclim-mode)
-            (ac-emacs-eclim-config)
-            (message "Enabled eclim-mode...")))
-
+;; ============================================================================
 ;; Company
-;; (require 'company)
-;; (require 'company-emacs-eclim)
-;; (company-emacs-eclim-setup)
+(require 'company)
+(require 'company-emacs-eclim)
 ;; (global-company-mode t)
 ;; Emacs-eclim completions in company are case sensitive by default. To make
 ;; completions case insensitive set company-emacs-eclim-ignore-case to t
 
+(add-hook 'java-mode-hook
+          (lambda ()
+            (eclim-mode)
+            (setq help-at-pt-display-when-idle t)
+            (setq help-at-pt-timer-delay 0.1)
+            (help-at-pt-set-timer)
+            (company-emacs-eclim-setup)  ;; could be auto-complete
+            (message "Enabled eclim-mode...")))
+
+;; ============================================================================
 ;; When emacs-eclim is configured correctly, you don't need to modify the
 ;; configuration for the eclimd package. Still, there are some configurable
 ;; variables you can tweak:

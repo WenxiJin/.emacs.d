@@ -54,17 +54,17 @@
 (require 'init-which-key)
 (require 'init-avy)
 
-;; (require 'init-irony)
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
 ;; company-clang does a very decent job
-;; (require 'init-company)
-;; (require 'init-company-statistics)
-;; (require 'init-company-irony)
-;; (require 'init-company-irony-c-headers)
+(require 'init-company)
+(require 'init-company-statistics)
+(require 'init-irony)
+(require 'init-company-irony)
+(require 'init-company-irony-c-headers)
 ;; ------------------------------------------------------------------------
-(require 'init-ac)
-(require 'init-ac-dabbrev)
+;; (require 'init-ac)
+;; (require 'init-ac-dabbrev)
 ;; ac-clang is not under active development, hard to compile llvm, clang and
 ;; clang-server
 ;; (when (executable-find "clang-server")
