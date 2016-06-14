@@ -1,6 +1,10 @@
 (require-package 'which-key)
 
-(require 'which-key)
-(which-key-mode)
+(use-package which-key
+  :defer t
+  :config
+  (which-key-mode)
+  )
+
 
 (provide 'init-which-key)

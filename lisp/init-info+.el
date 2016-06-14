@@ -1,6 +1,8 @@
 (require-package 'info+)
 
-(require 'info+)
+(use-package init-info+
+             :defer t
+             )
 
 
 (provide 'init-info+)

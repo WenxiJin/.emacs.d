@@ -1,7 +1,10 @@
 (require-package 'undo-tree)
 
-(require 'undo-tree)
-(global-undo-tree-mode)
+(use-package undo-tree
+  :defer t
+  :config
+  (global-undo-tree-mode)
+  )
 
 
 (provide 'init-undo-tree)

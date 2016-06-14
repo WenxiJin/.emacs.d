@@ -1,10 +1,15 @@
 (require-package 'expand-region)
 
-(require 'expand-region)
-(global-set-key (kbd "C-c +") 'er/expand-region)
-;; er/contract-region if you expand too far
+(use-package expand-region
+             :defer t
+             :bind (
+                    ("C-c =" . er/expand-region)
+                    ;; er/contract-region if you expand too far
+                    )
+             :config
+             ;; replace the marking region
+             (pending-delete-mode t)
+             )
 
-;; replace the marking region
-(pending-delete-mode t)
 
 (provide 'init-expand-region)

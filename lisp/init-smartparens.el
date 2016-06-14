@@ -1,20 +1,14 @@
 (require-package 'smartparens)
 
-(require 'smartparens)
-(require 'smartparens-config)
+(use-package smartparens
+  :defer t
+  :config
+  (defun my-smartparens-mode-hook ()
+    (require 'smartparens-config)
+    (show-smartparens-global-mode t))
 
-;; ===================================================================
-;; Hand over to spacemacs-theme
-;; (set-face-attribute 'sp-pair-overlay-face nil
-;;                     :background "yellow"
-;;                     :foreground nil)
+  (add-hook 'prog-mode-hook 'my-smartparens-mode-hook)
+  )
 
-;; (set-face-attribute 'sp-show-pair-match-face nil
-;;                     :foreground "red"
-;;                     :weight 'bold
-;;                     :underline t
-;;                     :inherit 'bold)
-
-(show-smartparens-global-mode t)
 
 (provide 'init-smartparens)

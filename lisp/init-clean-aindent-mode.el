@@ -2,8 +2,11 @@
 
 (require-package 'clean-aindent-mode)
 
-(require 'clean-aindent-mode)
-(add-hook 'prog-mode-hook 'clean-aindent-mode)
+(use-package clean-aindent-mode
+  :defer t
+  :config
+  (add-hook 'prog-mode-hook 'clean-aindent-mode)  
+  )
 
 
 (provide 'init-clean-aindent-mode)

@@ -1,5 +1,8 @@
 (require-package 'cmake-mode)
 
-(require 'cmake-mode)
+(use-package cmake-mode
+  :defer t
+  )
+
 
 (provide 'init-cmake-mode)

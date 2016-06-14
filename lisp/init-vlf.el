@@ -1,6 +1,8 @@
 (require-package 'vlf)
 
-(require 'vlf-setup)
+(use-package vlf-setup
+             :defer t
+             )
 
 
 (provide 'init-vlf)

@@ -1,5 +1,8 @@
 (require-package 'magit)
 
-(require 'magit)
+(use-package magit
+  :defer t
+  )
+
 
 (provide 'init-magit)

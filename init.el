@@ -16,6 +16,7 @@
 (load custom-file)
 
 (require 'init-elpa)
+(require 'init-use-package)
 
 ;; Extra packages which do not require any configuration
 (if *is-a-mac*
@@ -83,7 +84,6 @@
 (require 'init-helm)
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
-(require 'init-helm-themes)
 ;; (require 'init-helm-cscope)
 (require 'init-helm-ag)
 (require 'init-helm-gtags)
@@ -127,18 +127,18 @@
 ;; An interface to the Eclipse IDE
 (require 'init-emacs-eclim)
 
-(require 'init-rebox2)
+;; (require 'init-rebox2)
 (require 'init-expand-region)
-;; Group: File -> vlf
+;; ;; Group: File -> vlf
 (require 'init-vlf)
-;; Group: Environment -> Windows -> Golden Ratio
+;; ;; Group: Environment -> Windows -> Golden Ratio
 (require 'init-golden-ratio)
-;; Group: Help -> Info+
+;; ;; Group: Help -> Info+
 (require 'init-info+)
-;; Group: Help -> Rainbow
-(require 'init-rainbow)
-;; Group: Convenience -> Workgroups2
-(require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
+;; ;; Group: Help -> Rainbow
+;; (require 'init-rainbow)
+;; ;; Group: Convenience -> Workgroups2
+;; (require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
 ;; after everything is properly initialized
 
 ;; (require 'init-function-args)

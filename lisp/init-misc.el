@@ -24,7 +24,6 @@
 ;; (global-set-key (kbd "C-c e") 'end-of-buffer)
 
 ;; Compile
-(require 'compile)
 (setq compilation-ask-about-save nil          ; Just save before compiling
       compilation-always-kill t               ; Just kill old compile processes before starting the new one
       compilation-scroll-output 'first-error) ; Automatically scroll to first
@@ -39,8 +38,6 @@
 (setq make-backup-files nil)
 ;; stop creating #autosave# files
 (setq auto-save-default nil)
-;; confirm before killing emacs
-(setq confirm-kill-emacs 'y-or-n-p)
 ;; set the default width of fill-column
 (setq-default fill-column 80)
 

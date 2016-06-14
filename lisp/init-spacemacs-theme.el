@@ -1,5 +1,10 @@
 (require-package 'spacemacs-theme)
 
-(load-theme 'spacemacs-dark t)
+(use-package spacemacs-theme
+  :defer t
+  :init
+  (load-theme 'spacemacs-dark t)
+  )
+
 
 (provide 'init-spacemacs-theme)

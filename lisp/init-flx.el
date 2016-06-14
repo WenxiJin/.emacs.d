@@ -1,5 +1,8 @@
 (require-package 'flx)
 
-(require 'flx)
+(use-package flx
+  :defer t
+  )
+
 
 (provide 'init-flx)

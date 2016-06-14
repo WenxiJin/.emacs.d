@@ -1,7 +1,10 @@
 (require-package 'avy)
 
-(require 'avy)
-(avy-setup-default)
+(use-package avy
+  :defer t
+  :config
+  (avy-setup-default)  
+  )
 
 
 (provide 'init-avy)

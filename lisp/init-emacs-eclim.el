@@ -1,14 +1,32 @@
 (require-package 'emacs-eclim)
 
-;; ----------------------------------------------------------------------------
-;; emacs-eclim, company are default packages for java in spacemacs
-;; ----------------------------------------------------------------------------
-(require 'eclim)
-;; only enable it in java mode
-;; (global-eclim-mode)
+(use-package eclim
+             :defer t
+             :init
+             (custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
+                                   '(eclim-executable "/opt/eclipse/eclim"))
 
-;; if you want to control eclimd from emacs, also add:
-(require 'eclimd)
+             :config
+             (defun my-eclim-mode-hook ()
+               (require 'eclimd)
+               ;; ============================================================================
+               ;; Company
+               (require 'company)
+               (require 'company-emacs-eclim)
+               ;; (global-company-mode t)
+               ;; Emacs-eclim completions in company are case sensitive by default. To make
+               ;; completions case insensitive set company-emacs-eclim-ignore-case to t
+               )
+             (add-hook 'java-mode-hook
+                       (lambda ()
+                         (eclim-mode)
+                         (setq help-at-pt-display-when-idle t)
+                         (setq help-at-pt-timer-delay 0.1)
+                         (help-at-pt-set-timer)
+                         (company-emacs-eclim-setup)  ;; could be auto-complete
+                         (message "Enabled eclim-mode..."))
+                       )
+             )
 
 ;; emacs-eclim tries its best to locate Eclipse installation.
 ;; if you have Eclipse installed somewhere else, try to add this
@@ -39,8 +57,7 @@
 ;; drwxrwxr-x   4 root users 4.0K Feb 18 09:43 p2/
 ;; drwxrwxr-x  19 root users  88K Feb 18 09:43 plugins/
 ;; drwxrwxr-x   2 root users 4.0K Feb 18 09:43 readme/
-(custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
-                      '(eclim-executable "/opt/eclipse/eclim"))
+
 ;; ----------------------------------------------------------------------------
 ;; NOTE: start-eclimd only works in emacs GUI
 ;; NOTE: /opt/eclipse/eclimd only works in linux shell, not terminal emulator
@@ -61,22 +78,6 @@
 ;; only enable it in java mode
 ;; (ac-emacs-eclim-config)
 
-;; ============================================================================
-;; Company
-(require 'company)
-(require 'company-emacs-eclim)
-;; (global-company-mode t)
-;; Emacs-eclim completions in company are case sensitive by default. To make
-;; completions case insensitive set company-emacs-eclim-ignore-case to t
-
-(add-hook 'java-mode-hook
-          (lambda ()
-            (eclim-mode)
-            (setq help-at-pt-display-when-idle t)
-            (setq help-at-pt-timer-delay 0.1)
-            (help-at-pt-set-timer)
-            (company-emacs-eclim-setup)  ;; could be auto-complete
-            (message "Enabled eclim-mode...")))
 
 ;; ============================================================================
 ;; When emacs-eclim is configured correctly, you don't need to modify the
