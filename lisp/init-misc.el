@@ -39,8 +39,6 @@
 (setq make-backup-files nil)
 ;; stop creating #autosave# files
 (setq auto-save-default nil)
-;; confirm before killing emacs
-(setq confirm-kill-emacs 'y-or-n-p)
 ;; set the default width of fill-column
 (setq-default fill-column 80)
 
