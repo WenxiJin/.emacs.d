@@ -38,8 +38,7 @@
 (require 'init-whitespace)
 ;; (require 'init-highlight-chars)  ;; conflict with helm highlight
 (require 'init-highlight-symbol)
-(require 'init-highlight-numbers)
-(require 'init-highlight-current-line)
+(require 'init-hl-line)
 ;; (require 'init-highlight-indentation)
 ;; (require 'init-diff-hl)
 
