@@ -42,5 +42,8 @@
 ;; set the default width of fill-column
 (setq-default fill-column 80)
 
+;; enable narrow-to region feature
+(put 'narrow-to-region 'disabled nil)
+
 
 (provide 'init-misc)

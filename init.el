@@ -48,19 +48,19 @@
 (require 'init-ws-butler)
 
 (require 'init-iedit)
-(require 'init-multiple-cursors)
+;; (require 'init-multiple-cursors)
 (require 'init-undo-tree)
-(require 'init-which-key)
-(require 'init-avy)
+;; (require 'init-which-key)
+;; (require 'init-avy)
 
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
 ;; company-clang does a very decent job
 (require 'init-company)
 (require 'init-company-statistics)
-(require 'init-irony)
-(require 'init-company-irony)
-(require 'init-company-irony-c-headers)
+;; (require 'init-irony)
+;; (require 'init-company-irony)
+;; (require 'init-company-irony-c-headers)
 ;; ------------------------------------------------------------------------
 ;; (require 'init-ac)
 ;; (require 'init-ac-dabbrev)
@@ -82,7 +82,7 @@
 (require 'init-helm)
 (require 'init-helm-projectile)
 (require 'init-helm-swoop)
-(require 'init-helm-themes)
+;; (require 'init-helm-themes)
 ;; (require 'init-helm-cscope)
 (require 'init-helm-ag)
 (require 'init-helm-gtags)
@@ -94,15 +94,12 @@
 ;; gccsense - built-in gcc/g++ 4.4, not for cross-compile
 ;; (require 'init-gccsense)
 
-(require 'init-cmake-mode)
-;; enable narrow-to region feature
-(put 'narrow-to-region 'disabled nil)
-
 (require 'init-ace-window)
-(require 'init-org)
 
-(require 'init-markdown)
-(require 'init-adoc-mode)
+;; (require 'init-cmake-mode)
+(require 'init-org)
+;; (require 'init-markdown)
+;; (require 'init-adoc-mode)
 (require 'init-web-mode)
 
 (if (display-graphic-p)
@@ -123,10 +120,10 @@
 (require 'init-spacemacs-theme)
 ;; (require 'init-atom-one-dark-theme)
 
-;; An interface to the Eclipse IDE
+;; An interface to the Eclipse IDE, currently only enabled for java-mode
 (require 'init-emacs-eclim)
 
-(require 'init-rebox2)
+;; (require 'init-rebox2)
 (require 'init-expand-region)
 ;; Group: File -> vlf
 (require 'init-vlf)
@@ -137,27 +134,8 @@
 ;; Group: Help -> Rainbow
 (require 'init-rainbow)
 ;; Group: Convenience -> Workgroups2
-(require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
+;; (require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
 ;; after everything is properly initialized
-
-;; (require 'init-function-args)
-
-;; TODO - Group all the modules
-;; (require 'setup-applications)
-;; (require 'setup-communication)
-;; (require 'setup-convenience)
-;; (require 'setup-data)
-;; (require 'setup-development)
-;; (require 'setup-editing)
-;; (require 'setup-environment)
-;; (require 'setup-external)
-;; (require 'setup-faces-and-ui)
-;; (require 'setup-files)
-;; (require 'setup-help)
-;; (require 'setup-programming)
-;; (require 'setup-text)
-;; (require 'setup-local)
-
 
 
 ;;-------------------------------------------------------------------------
