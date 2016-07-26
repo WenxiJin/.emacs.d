@@ -88,7 +88,10 @@
 (require 'init-helm-gtags)
 
 ;; git-version >= 1.9.4
-(require 'init-magit)
+(unless (version< emacs-version "24.4")
+  (progn
+    (require 'init-magit)
+    ))
 ;; (require 'init-helm-ls-git)
 
 ;; gccsense - built-in gcc/g++ 4.4, not for cross-compile
