@@ -30,6 +30,7 @@
 (require 'init-misc)
 ;; (require 'init-google-c-style)
 (require 'google-coding-style)
+(require 'init-flycheck)
 (require 'init-smartparens)
 (require 'init-rainbow-delimiters)
 (require 'init-git)
