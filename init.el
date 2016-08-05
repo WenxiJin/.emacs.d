@@ -39,7 +39,8 @@
 (require 'init-whitespace)
 ;; (require 'init-highlight-chars)  ;; conflict with helm highlight
 (require 'init-highlight-symbol)
-(require 'init-hl-line)
+;; (require 'init-hl-line)
+(require 'init-highlight-current-line)
 ;; (require 'init-highlight-indentation)
 ;; (require 'init-diff-hl)
 
@@ -112,9 +113,10 @@
       )
   (progn
     ;; (require 'init-spaceline)
-    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-airline)  ;; require powerline patched font
     ;; (require 'init-solarized)
     ;; (require 'init-sml)
+    (require 'init-nyan-mode)
     )
   )
 
