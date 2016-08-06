@@ -105,6 +105,7 @@
 ;; (require 'init-markdown)
 ;; (require 'init-adoc-mode)
 (require 'init-web-mode)
+(require 'init-javadoc-lookup)
 
 (if (display-graphic-p)
     (progn
