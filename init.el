@@ -105,15 +105,17 @@
 ;; (require 'init-markdown)
 ;; (require 'init-adoc-mode)
 (require 'init-web-mode)
-(require 'init-javadoc-lookup)
+(when (executable-find "mvn")
+  (require 'init-javadoc-lookup))
 
 (if (display-graphic-p)
     (progn
       (require 'init-nyan-mode)
       )
   (progn
+    (require 'init-nyan-mode)
     ;; (require 'init-spaceline)
-    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-airline)  ;; require powerline patched font
     ;; (require 'init-solarized)
     ;; (require 'init-sml)
     )
