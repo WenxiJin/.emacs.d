@@ -128,7 +128,7 @@
 ;; (require 'init-atom-one-dark-theme)
 
 ;; An interface to the Eclipse IDE, currently only enabled for java-mode
-(require 'init-emacs-eclim)
+(require 'init-eclim)
 
 ;; (require 'init-rebox2)
 (require 'init-expand-region)

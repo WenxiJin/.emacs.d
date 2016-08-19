@@ -1,4 +1,6 @@
-(require-package 'emacs-eclim)
+(require-package 'eclim)
+(require-package 'company)
+(require-package 'company-emacs-eclim)
 
 ;; ----------------------------------------------------------------------------
 ;; emacs-eclim, company are default packages for java in spacemacs
@@ -132,4 +134,4 @@
 ;; stop-eclimd. You should use this command when you wish to stop the eclimd
 ;; program.
 
-(provide 'init-emacs-eclim)
+(provide 'init-eclim)
