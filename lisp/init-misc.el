@@ -1,10 +1,6 @@
 ;; no startup screen
 (setq inhibit-splash-screen t)
 
-;; disable tab indent
-(setq-default
- indent-tabs-mode nil)
-
 ;; revert buffer
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t

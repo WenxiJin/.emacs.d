@@ -28,6 +28,7 @@
 
 ;; minor customizations
 (require 'init-misc)
+(require 'init-smart-tabs-mode)
 ;; (require 'init-google-c-style)
 (require 'google-coding-style)
 (require 'init-flycheck)
