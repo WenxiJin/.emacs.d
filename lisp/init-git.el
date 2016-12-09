@@ -1,8 +1,8 @@
 (require-package 'git)
-(require-package 'git-blame)
+(require-package 'git-blamed)
 
 (require 'git)
-(require 'git-blame)
+(require 'git-blamed)
 (require 'vc-git)
 
 (add-to-list 'load-path "/usr/share/git-core/emacs/git")

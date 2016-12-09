@@ -6,8 +6,8 @@
 ;; (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 (setq whitespace-style
       (quote (face trailing tab-mark lines-tail)))
-(add-hook 'prog-mode-hook 'whitespace-mode)
-(global-whitespace-mode t)
+;; (add-hook 'prog-mode-hook 'whitespace-mode)
+;; (global-whitespace-mode t)
 
 
 (provide 'init-whitespace)
