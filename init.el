@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (let ((minver "23.3"))
   (when (version<= emacs-version "23.1")
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
@@ -125,7 +132,8 @@
 ;; (require 'init-atom-one-dark-theme)
 
 ;; An interface to the Eclipse IDE, currently only enabled for java-mode
-(require 'init-emacs-eclim)
+;; eclim is relatively slow, prefer helm-gtags for auto-complete and code navigation
+;; (require 'init-emacs-eclim)
 
 ;; (require 'init-rebox2)
 (require 'init-expand-region)
