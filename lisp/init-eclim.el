@@ -1,4 +1,6 @@
-(require-package 'emacs-eclim)
+(require-package 'eclim)
+(require-package 'company)
+(require-package 'company-emacs-eclim)
 
 ;; ----------------------------------------------------------------------------
 ;; emacs-eclim, company are default packages for java in spacemacs
@@ -39,8 +41,19 @@
 ;; drwxrwxr-x   4 root users 4.0K Feb 18 09:43 p2/
 ;; drwxrwxr-x  19 root users  88K Feb 18 09:43 plugins/
 ;; drwxrwxr-x   2 root users 4.0K Feb 18 09:43 readme/
-(custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
-                      '(eclim-executable "/opt/eclipse/eclim"))
+;; (custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
+;;                       '(eclim-executable "/opt/eclipse/eclim"))
+
+;; Normally eclipse is installed at /opt, however it is also quite common to
+;; install at user's home directory ~/.
+;;
+(if (file-accessible-directory-p "/opt/eclipse")
+    (custom-set-variables '(eclim-eclipse-dirs '("/opt/eclipse"))
+                          '(eclim-executable "/opt/eclipse/eclim"))
+  (custom-set-variables '(eclim-eclipse-dirs '("~/eclipse"))
+                        '(eclim-executable "~/eclipse/eclim"))
+  )
+
 ;; ----------------------------------------------------------------------------
 ;; NOTE: start-eclimd only works in emacs GUI
 ;; NOTE: /opt/eclipse/eclimd only works in linux shell, not terminal emulator
@@ -121,4 +134,4 @@
 ;; stop-eclimd. You should use this command when you wish to stop the eclimd
 ;; program.
 
-(provide 'init-emacs-eclim)
+(provide 'init-eclim)

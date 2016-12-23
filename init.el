@@ -35,6 +35,7 @@
 
 ;; minor customizations
 (require 'init-misc)
+(require 'init-smart-tabs-mode)
 ;; (require 'init-google-c-style)
 (require 'google-coding-style)
 (require 'init-flycheck)
@@ -112,14 +113,17 @@
 ;; (require 'init-markdown)
 ;; (require 'init-adoc-mode)
 (require 'init-web-mode)
+(when (executable-find "mvn")
+  (require 'init-javadoc-lookup))
 
 (if (display-graphic-p)
     (progn
       (require 'init-nyan-mode)
       )
   (progn
+    (require 'init-nyan-mode)
     ;; (require 'init-spaceline)
-    (require 'init-airline)  ;; require powerline patched font
+    ;; (require 'init-airline)  ;; require powerline patched font
     ;; (require 'init-solarized)
     ;; (require 'init-sml)
     )
@@ -133,7 +137,7 @@
 
 ;; An interface to the Eclipse IDE, currently only enabled for java-mode
 ;; eclim is relatively slow, prefer helm-gtags for auto-complete and code navigation
-;; (require 'init-emacs-eclim)
+;; (require 'init-eclim)
 
 ;; (require 'init-rebox2)
 (require 'init-expand-region)

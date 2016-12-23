@@ -7,5 +7,9 @@
 (global-set-key (kbd "<f5>") 'highlight-symbol-next)
 (global-set-key (kbd "<f6>") 'highlight-symbol-prev)
 (global-set-key [(meta f9)] 'highlight-symbol-query-replace)
+(set-face-attribute 'highlight-symbol-face nil
+                    :background "green"
+                    )
+
 
 (provide 'init-highlight-symbol)
