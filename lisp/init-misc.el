@@ -28,5 +28,9 @@
 ;; enable narrow-to region feature
 (put 'narrow-to-region 'disabled nil)
 
+;; Save place in files between Sessions, available in Emacs 25.1 and newer
+;; versions
+(save-place-mode 1)
+
 
 (provide 'init-misc)
