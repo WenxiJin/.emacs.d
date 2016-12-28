@@ -32,5 +32,7 @@
 ;; versions
 (save-place-mode 1)
 
+;; y, n instead of yes, no
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (provide 'init-misc)
