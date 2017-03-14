@@ -35,21 +35,21 @@
 
 ;; minor customizations
 (require 'init-misc)
-;; (require 'init-smart-tabs-mode)
-;; ;; (require 'init-google-c-style)
+(require 'init-smart-tabs-mode)
+(require 'init-google-c-style)
 ;; (require 'google-coding-style)
 ;; (require 'init-flycheck)
-;; (require 'init-smartparens)
+(require 'init-smartparens)
 (require 'init-rainbow-delimiters)
 ;; (require 'init-git)
 
-;; ;; trailing-whitespace
-;; (require 'init-whitespace)
+;; trailing-whitespace
+(require 'init-whitespace)
 ;; ;; (require 'init-highlight-chars)  ;; conflict with helm highlight
-;; (require 'init-highlight-symbol)
-;; (require 'init-hl-line)
-;; ;; (require 'init-highlight-indentation)
-;; ;; (require 'init-diff-hl)
+(require 'init-highlight-symbol)
+(require 'init-hl-line)
+(require 'init-highlight-indentation)
+(require 'init-diff-hl)
 
 ;; 3 minor modes for the perfect indent
 (require 'init-clean-aindent-mode)
@@ -62,7 +62,7 @@
 (require 'init-which-key)
 (require 'init-avy)
 
-;; (require 'init-yasnippet)  ;; should be loaded before ac
+(require 'init-yasnippet)  ;; should be loaded before ac
 ;; ;; ------------------------------------------------------------------------
 ;; ;; company-clang does a very decent job
 (require 'init-company)
@@ -79,8 +79,8 @@
 ;; ;;   (message "Found clang-server")
 ;; ;;   (require 'init-ac-clang))
 
-;; ;; ------------------------------------------------------------------------
-;; (require 'init-xcscope)  ;; Conflict against ac-clang
+;; ------------------------------------------------------------------------
+(require 'init-xcscope)  ;; Conflict against ac-clang
 
 ;; (unless (version< emacs-version "24.4")
 ;;   (progn
@@ -96,12 +96,12 @@
 (require 'init-helm-ag)
 (require 'init-helm-gtags)
 
-;; ;; git-version >= 1.9.4
-;; (unless (version< emacs-version "24.4")
-;;   (progn
-;;     (require 'init-magit)
-;;     ))
-;; ;; (require 'init-helm-ls-git)
+;; git-version >= 1.9.4
+(unless (version< emacs-version "24.4")
+  (progn
+    (require 'init-magit)
+    ))
+;; (require 'init-helm-ls-git)
 
 ;; ;; gccsense - built-in gcc/g++ 4.4, not for cross-compile
 ;; ;; (require 'init-gccsense)
