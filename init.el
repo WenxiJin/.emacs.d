@@ -141,7 +141,7 @@
 ;; ;; (require 'init-rebox2)
 ;; (require 'init-expand-region)
 ;; ;; Group: File -> vlf
-;; (require 'init-vlf)
+(require 'init-vlf)
 ;; ;; Group: Environment -> Windows -> Golden Ratio
 ;; (require 'init-golden-ratio)
 ;; ;; Group: Help -> Info+
