@@ -131,7 +131,7 @@
 ;; ;; load color-theme at last, so that spacemacs-theme could overwrite any face
 ;; ;; attribute
 ;; ;; (require 'init-sublime-themes)
-;; ;; (require 'init-spacemacs-theme)
+(require 'init-spacemacs-theme)
 ;; ;; (require 'init-atom-one-dark-theme)
 
 ;; ;; An interface to the Eclipse IDE, currently only enabled for java-mode
