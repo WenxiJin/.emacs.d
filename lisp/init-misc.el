@@ -5,7 +5,8 @@
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t
       auto-revert-verbose nil)
-(global-set-key (kbd "C-c r") 'revert-buffer)
+;; (global-set-key (kbd "C-c r") 'revert-buffer)
+(global-set-key (kbd "C-x q") 'kill-emacs)
 
 (transient-mark-mode t)
 
