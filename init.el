@@ -60,7 +60,7 @@
 ;; (require 'init-multiple-cursors)
 (require 'init-undo-tree)
 ;; (require 'init-which-key)
-;; (require 'init-avy)
+(require 'init-avy)
 
 (require 'init-yasnippet)  ;; should be loaded before ac
 ;; ------------------------------------------------------------------------
