@@ -145,8 +145,6 @@
 (require 'init-vlf)
 ;; Group: Environment -> Windows -> Golden Ratio
 (require 'init-golden-ratio)
-;; Group: Help -> Info+
-(require 'init-info+)
 ;; Group: Help -> Rainbow
 (require 'init-rainbow)
 ;; Group: Convenience -> Workgroups2
