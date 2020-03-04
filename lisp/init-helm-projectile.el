@@ -13,5 +13,6 @@
 (setq projectile-file-exists-local-cache-expire (* 5 60))
 (add-to-list 'projectile-globally-ignored-directories "backup")
 
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (provide 'init-helm-projectile)
