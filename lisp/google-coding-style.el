@@ -362,7 +362,8 @@ JavaScript Style Guide."
     "Configures Emacs' built-in java-mode for compliance with the
 Java Style Guide."
     (interactive)
-    (setq tab-width 4))
+    (setq tab-width 4)
+    (google-coding-style/set-doc-style))
 (add-hook 'java-mode-hook 'google-set-java-style)
 
 (provide 'google-coding-style)
