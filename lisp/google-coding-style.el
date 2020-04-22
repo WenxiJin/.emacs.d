@@ -358,5 +358,11 @@ JavaScript Style Guide."
 
 
 ;; java-mode
+(defun google-set-jave-style ()
+    "Configures Emacs' built-in java-mode for compliance with the
+Java Style Guide."
+    (interactive)
+    (setq tab-width 4)
+(add-hook 'java-mode-hook 'google-set-java-style)
 
 (provide 'google-coding-style)
