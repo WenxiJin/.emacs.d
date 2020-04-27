@@ -2,6 +2,6 @@
 
 (require 'avy)
 (avy-setup-default)
-(global-set-key (kbd "C-x j j") 'avy-goto-char)
+(global-set-key (kbd "C-c j j") 'avy-goto-char)
 
 (provide 'init-avy)
