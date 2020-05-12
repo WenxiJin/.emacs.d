@@ -358,7 +358,7 @@ JavaScript Style Guide."
 
 
 ;; java-mode
-(defun google-set-jave-style ()
+(defun google-set-java-style ()
     "Configures Emacs' built-in java-mode for compliance with the
 Java Style Guide."
     (interactive)
