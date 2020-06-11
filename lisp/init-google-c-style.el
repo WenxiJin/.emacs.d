@@ -10,5 +10,11 @@
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-hook)
 
+(defun my-c++-mode-hook ()
+  ;; namespace only in c++ mode
+  (c-set-offset 'innamespace [2])
+  )
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
 
 (provide 'init-google-c-style)
