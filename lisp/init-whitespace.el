@@ -9,6 +9,10 @@
 ;; (add-hook 'prog-mode-hook 'whitespace-mode)
 ;; (global-whitespace-mode t)
 
+;; diff-mode
+(add-hook 'diff-mode-hook
+          (lambda ()
+            (whitespace-toggle-options '(tab-mark))))
 
 (provide 'init-whitespace)
 
