@@ -363,6 +363,7 @@ JavaScript Style Guide."
 Java Style Guide."
     (interactive)
     (setq tab-width 4)
+    (setq c-basic-offset 4)
     (google-coding-style/set-doc-style))
 (add-hook 'java-mode-hook 'google-set-java-style)
 
