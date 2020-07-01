@@ -4,8 +4,9 @@
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
 (defun my-c-mode-hook ()
-  ;; NOTE: overwrite c-basic-offset from 2 to 4
-  ;; (setq c-basic-offset 4)
+  (setq tab-width 2)
+  (setq indent-tabs-mode nil)
+  (setq c-basic-offset 2)
   (c-set-offset 'access-label '-)
   (c-set-offset 'member-init-intro '+)
   (c-set-offset 'arglist-cont-nonempty '+)
