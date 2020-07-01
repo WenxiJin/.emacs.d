@@ -18,3 +18,4 @@ javadoc-cache
 url
 places
 custom.el
+transient/
