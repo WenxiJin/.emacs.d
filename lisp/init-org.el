@@ -6,6 +6,6 @@
 (setq org-log-done 'time)
 (setq org-todo-keywords
       '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
-
+(setq org-html-validation-link nil)
 
 (provide 'init-org)
