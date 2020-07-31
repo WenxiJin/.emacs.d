@@ -150,6 +150,7 @@
 ;; (require 'init-workgroups2)  ;; Remember to put this line at the bottom of init.el
 ;; after everything is properly initialized
 
+;;; TODO: add beacon mode, https://github.com/Malabarba/beacon
 
 ;;-------------------------------------------------------------------------
 ;; init.el ends here
